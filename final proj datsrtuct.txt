@@ -1,0 +1,316 @@
+#include <iostream>
+using namespace std;
+#include<conio.h>
+
+int main()
+{
+
+	int procee;
+	int code;
+	int price1, price2, price3, price4;
+	int quantity1, quantity2, quantity3, quantity4;
+	char choice1, choice2, choice3, choice4;
+	double t1, t2, t3, t4;
+
+
+
+
+	std::cout << "Welcome to ABC Company!\n";
+	std::cout << "If you would like to proceed type '1' if not type '0'\n";
+	std::cin >> procee;
+
+	cout << "\n---------------------------------------------------\n";
+
+
+	if (procee == 1)
+	{
+
+		//Pricelist
+		cout << " Price List: \n";
+		cout << " \n Code = 1 : 0 to 4 dozen of can = P 240.00 per can \n";
+		cout << " \n Extra can min of 1 = P 20.00 \n";
+		cout << " \n Code = 2: 5 to 7 dozen of can = P 237.00 per can \n";
+		cout << " \n Extra can min of 1 = P 19.75 \n";
+		cout << " \n Code = 3: 8 to 10 dozen of can = P 234.00 per can \n";
+		cout << " \n Extracan min of 1 = P 19.5 \n";
+		cout << " \n Code = 4: 11 or more dozen of can = P 240.00 per can \n";
+		cout << " \n Extracan min of 1 = P 19.00 \n";
+
+
+		cout << "\n---------------------------------------------------\n";
+
+
+		cout << "Please, Enter the Code:\n";
+		cin >> code;
+
+
+
+
+		//billing computation1
+
+		if (code == 1)
+		{
+			cout << "\nEnter the price:\n";
+			cin >> price1;
+			cout << "\nEnter the quantity:\n";
+			cin >> quantity1;
+
+			// wrong quantity
+			if (quantity1 < 0)
+			{
+				cout << "\nInvalid Quantity.\n";
+				cout << "\nPlease Refresh the site.\n";
+				return 0;
+			}
+			if (quantity1 > 4)
+			{
+				cout << "\nInvalid Quantity.\n";
+				cout << "\nPlease Refresh the site.\n";
+				return 0;
+			}
+			//gg
+
+			cout << "\nExtra cans? (y/n) :\n";
+			cin >> choice1;
+
+			double c1 = price1 * quantity1;
+
+
+
+			if (choice1 == 'y')
+			{
+				double b1 = c1 + 20;
+				double t1 = b1;
+
+
+				//Bill
+				cout << "\n---------------------------------------------------\n";
+				cout << " \n      Bill form of ABC Company   \n";
+				cout << " \nItem --------C1\n";
+				cout << " \nPrice --------P 240.00 per dozen cans\n";
+				cout << " \nQuantity --------" << quantity1;
+				cout << " \nExtra Can --------Yes";
+
+				//TOTALSSSSS
+				cout << "\nTotal Price --------P " << t1;
+				cout << " \nThank you for trusting us with your purchase!:-)";
+
+				cout << "\n---------------------------------------------------\n";
+			}
+			else
+			{
+				double t1 = c1;
+				//Bill
+				cout << "\n---------------------------------------------------\n";
+				cout << " \n      Bill form of ABC Company   \n";
+				cout << " \nItem --------C1\n";
+				cout << " \nPrice --------P 240.00 per dozen cans\n";
+				cout << " \nQuantity --------" << quantity1 << "\n";
+				cout << " \nExtra Can --------No\n";
+
+				//TOTALSSSSS
+				cout << "\nTotal Price --------P " << t1 << "\n";
+				cout << " \nThank you for trusting us with your purchase! :-)";
+				cout << "\n---------------------------------------------------\n";
+			}
+
+		}
+
+		//billing computation2
+
+		if (code == 2)
+		{
+			cout << "\nEnter the price:\n";
+			cin >> price2;
+			cout << "\nEnter the quantity:\n";
+			cin >> quantity2;
+
+			//wrong quan
+			if (quantity2 < 5)
+			{
+				cout << "\nInvalid Quantity.\n";
+				cout << "\nPlease Refresh the site.\n";
+				return 0;
+			}
+			if (quantity2 > 7)
+			{
+				cout << "\nInvalid Quantity.\n";
+				cout << "\nPlease Refresh the site.\n";
+				return 0;
+			}
+			//gg
+
+			cout << "\nExtra cans? (y/n) :\n";
+			cin >> choice2;
+
+			double c2 = price2 * quantity2;
+
+			if (choice2 == 'y')
+			{
+				double b2 = c2 + 19.75;
+				double t2 = b2;
+
+
+				//Bill
+				cout << "\n---------------------------------------------------\n";
+				cout << " \n      Bill form of ABC Company   \n";
+				cout << " \nItem --------C2\n";
+				cout << " \nPrice --------P 237.00 per dozen cans\n";
+				cout << " \nQuantity --------" << quantity2 << "\n";
+				cout << " \nExtra Can --------Yes\n";
+
+				//TOTALSSSSS
+				cout << "\nTotal Price --------P " << t2 << "\n";
+				cout << " \nThank you for trusting us with your purchase! :-)";
+				cout << "\n---------------------------------------------------\n";
+			}
+			else
+			{
+				double t2 = c2;
+				//Bill
+				cout << "\n---------------------------------------------------\n";
+				cout << " \n      Bill form of ABC Company   \n";
+				cout << " \nItem --------C1\n";
+				cout << " \nPrice --------P 237.00 per dozen cans\n";
+				cout << " \nQuantity --------" << quantity2 << "\n";
+				cout << " \nExtra Can --------No\n";
+
+				//TOTALSSSSS
+				cout << "\nTotal Price --------P " << t2 << "\n";
+				cout << " \nThank you for trusting us with your purchase! :-)";
+				cout << "\n---------------------------------------------------\n";
+			}
+
+		}
+		//billing computation3
+
+		if (code == 3)
+		{
+			cout << "\nEnter the price:\n";
+			cin >> price3;
+			cout << "\nEnter the quantity:\n";
+			cin >> quantity3;
+			//wq3
+			if (quantity3 < 8)
+			{
+				cout << "\nInvalid Quantity.\n";
+				cout << "\nPlease Refresh the site.\n";
+				return 0;
+			}
+			if (quantity3 > 10)
+			{
+				cout << "\nInvalid Quantity.\n";
+				cout << "\nPlease Refresh the site.\n";
+				return 0;
+			}
+			//gg
+
+			cout << "\nExtra cans? (y/n) :\n";
+			cin >> choice3;
+
+			double c3 = price3 * quantity3;
+
+			if (choice3 == 'y')
+			{
+				double b3 = c3 + 19.5;
+				double t3 = b3;
+
+
+				//Bill
+				cout << "\n---------------------------------------------------\n";
+				cout << " \n      Bill form of ABC Company   \n";
+				cout << " \nItem --------C3\n";
+				cout << " \nPrice --------P 234.00 per dozen cans\n";
+				cout << " \nQuantity --------" << quantity3 << "\n";
+				cout << " \nExtra Can --------Yes\n";
+
+				//TOTALSSSSS
+				cout << "\nTotal Price --------P " << t3 << "\n";
+				cout << " \nThank you for trusting us with your purchase! :-)";
+				cout << "\n---------------------------------------------------\n";
+			}
+			else
+			{
+				double t3 = c3;
+				//Bill
+				cout << "\n---------------------------------------------------\n";
+				cout << " \n      Bill form of ABC Company   \n";
+				cout << " \nItem --------C3\n";
+				cout << " \nPrice --------P 234.00 per dozen cans\n";
+				cout << " \nQuantity --------" << quantity3 << "\n";
+				cout << " \nExtra Can --------No\n";
+
+				//TOTALSSSSS
+				cout << "\nTotal Price --------P " << t3 << "\n";
+				cout << " \nThank you for trusting us with your purchase! :-)";
+				cout << "\n---------------------------------------------------\n";
+			}
+
+		}
+		//billing computation4
+
+		if (code == 4)
+		{
+			cout << "\nEnter the price:\n";
+			cin >> price4;
+			cout << "\nEnter the quantity:\n";
+			cin >> quantity4;
+
+			//wqorng quantity
+			if (quantity4 < 11)
+			{
+				cout << "\nInvalid Quantity.\n";
+				cout << "\nPlease Refresh the site.\n";
+				return 0;
+			}
+			//lol
+
+			cout << "\nExtra cans? (y/n) :\n";
+			cin >> choice4;
+
+			double c4 = price4 * quantity4;
+
+			if (choice4 == 'y')
+			{
+				double b4 = c4 + 19;
+				double t4 = b4;
+
+
+				//Bill
+				cout << "\n---------------------------------------------------\n";
+				cout << " \n      Bill form of ABC Company   \n";
+				cout << " \nItem --------C4\n";
+				cout << " \nPrice --------P 228.00 per dozen cans\n";
+				cout << " \nQuantity --------" << quantity4 << "\n";
+				cout << " \nExtra Can --------Yes\n";
+
+				//TOTALSSSSS
+				cout << "\nTotal Price --------P " << t4 << "\n";
+				cout << " \nThank you for trusting us with your purchase! :-)";
+				cout << "\n---------------------------------------------------\n";
+			}
+			else
+			{
+				double t4 = c4;
+				//Bill
+				cout << "\n---------------------------------------------------\n";
+				cout << " \n      Bill form of ABC Company   \n";
+				cout << " \nItem --------C4\n";
+				cout << " \nPrice --------P 228.00 per dozen cans\n";
+				cout << " \nQuantity --------" << quantity4 << "\n";
+				cout << " \nExtra Can --------No\n";
+
+				//TOTALSSSSS
+				cout << "\nTotal Price --------P " << t4 << "\n";
+				cout << " \nThank you for trusting us with your purchase! :-)";
+				cout << "\n---------------------------------------------------\n";
+			}
+
+		}
+	}
+	else 
+	{
+	cout << "Thank you for visiting! :-)";
+		return 0;
+	}
+}
